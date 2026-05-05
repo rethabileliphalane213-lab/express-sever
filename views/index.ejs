@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+    </head>
+    <body>
+        <h1> <%= title %> </h1>
+
+        <ul>
+<li>
+    <% if (users.locals) { %>
+        <% users.forEach(user=>{ %>
+<li>
+    ID: <%= user.id, Name: <%= user.firstName %> <%=user.lastName %>
+</li>
+       <% }) %>
+    <%}%>
+</li>
+
+        </ul>
+<a href="/create">Create user</a>
+    </body>
+</html>
