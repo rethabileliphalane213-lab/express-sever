@@ -8,6 +8,14 @@
  <form action="/<%= user.id %>/update" method="POST">
     <input type="text" name="firstName" value="<%= user.firstName %>" required>
     <input type="text" name="lastName" value="<%= user.lastName %>" required>
+    <input type="text" name="email" value="<%= user.email" require/>
+      <label for="age">Age</label>
+                <input type="number" name="age" id="age"/>
+            </div>
+            <div>
+                <label for="bio">Bio</label>
+                <input type="text" name="bio" id="bio" />
+            </div>
     <button type="submit">Update User</button>
   </form>
   <a href="/">Back to home</a>
