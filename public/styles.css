@@ -1,3 +1,99 @@
 body{
-    background-color:black
+    background-color:skyblue;
+    
+}
+
+h1,ul{
+position:absolute;
+left:50%;
+}
+
+h1{
+    top:0%;
+    font-size:2.3em
+}
+ul{
+    top: 10%;
+}
+
+#create{
+    position:absolute;
+    bottom: 50%;
+    font-size:1.5em;
+   color:gold;
+   left:50%;
+}
+
+#searchUser{
+    position:absolute;
+    bottom: 50%;
+    font-size:1.5em;
+   color:gold;
+   left:60%;
+}
+#searchUser:hover{
+    color:pink
+}
+#create:hover{
+    color:pink
+}
+div{
+    position:absolute;
+   
+    left:50%;
+    margin:10px
+}
+.name{
+    top: 30%;
+}
+.surname{
+    top: 35%;
+}
+.email{
+    top: 40%;
+}
+.age{
+    top: 45%;
+}
+
+.bio{
+    top: 50%;
+}
+
+.create-btn{
+    position:absolute;
+    top: 60%;
+    left:50%;
+    font-size:1.5em;
+    color:gold
+}
+.create-btn:hover{
+    color:pink
+}
+.home{
+    position:absolute;
+    top: 70%;
+    left:50%;
+    font-size:1.5em;
+    color:gold
+}
+.home:hover{    
+    color:pink
+}
+
+.searchName{
+    top: 30%;
+}
+.searchEmail{
+    top: 40%;
+}
+.serch-btn{
+    position:absolute;
+    top: 50%;
+    left:50%;
+    font-size:1.5em;
+    color:gold
+}
+.serch-btn:hover{
+    color:pink
 }
