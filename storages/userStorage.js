@@ -26,6 +26,18 @@ class UsersStorage {
   deleteUser(id) {
     delete this.storage[id];
   }
+
+searchUsers({ firstName, email }) {
+  return Object.values(this.storage).filter(user => {
+    return (
+      (firstName &&
+        user.firstName.toLowerCase() === firstName.toLowerCase()) ||
+      (email &&
+        user.email.toLowerCase() === email.toLowerCase())
+    );
+  });
+}
+
 }
 
 module.exports = new UsersStorage();

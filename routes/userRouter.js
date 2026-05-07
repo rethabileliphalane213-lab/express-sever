@@ -9,4 +9,9 @@ userRouter.get("/:id/update", userController.usersUpdateGet);
 userRouter.post("/:id/update", userController.usersUpdatePost);
 userRouter.post("/:id/delete", userController.usersDeletePost);
 userRouter.get("/search",userController.userSearchGet)
+userRouter.get("/searchUser", (req, res) => {
+    res.render("searchUser", {
+        title: "Search User"
+    });
+});
 module.exports=userRouter

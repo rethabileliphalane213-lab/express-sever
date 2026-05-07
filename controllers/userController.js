@@ -43,6 +43,7 @@ exports.usersCreatePost=(req,res)=>{
 }
 
 exports.usersUpdateGet=(req,res)=>{
+   const user = userStorage.getUser(req.params.id);
     res.render("updateUser",{
         title:"Update user",
         user:user
@@ -72,5 +73,10 @@ exports.usersDeletePost = (req, res) => {
 };
 
 exports.userSearchGet=(req,res)=>{
-    const {firstName,email}=re
+    const {firstName,email}=req.query
+    const users=userStorage.searchUsers({firstName,email})
+    res.render("search",{
+      title:"Search Results",
+      users 
+    })
 }

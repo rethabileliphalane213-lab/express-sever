@@ -2,23 +2,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="/styles.css">
         <title> <%= title %> </title>
     </head>
     <body>
         <%- include("partials/errors.ejs") %>
         <h1><%= title%></h1>
         <form action="/create" method="POST">
-            <label for="firstName">First Name</label>
+            <div class="name">
+                 <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" required>
-            <label for="lastName">Last Name</label>
+            </div>
+           
+            <div class="surname">
+                 <label for="lastName">Last Name</label>
             <input type="text" name="lastName" id="lastName" required>
+            </div>
+           
+            <div class="email">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required />
-            <div>
-                <label for="age">Age</label>
-                <input type="number" name="age" id="age"/>
             </div>
-            <div>
+            <div class="age">
+                <label for="age">Age</label>
+              <input type="number" name="age"  />
+            </div>
+            <div class="bio">
                 <label for="bio">Bio</label>
                  <textarea name="bio" id="bio">hey</textarea>
             </div>

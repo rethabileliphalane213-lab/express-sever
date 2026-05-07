@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= title %></title>
-    </head>
-    <body>
-        <ul>
-            <li><%= name</li>
-            <li><%= surname%></li>
-            <li><%= email1 %></li>
-            
-        </ul>
-    </body>
+<head>
+    <title><%= title %></title>
+      <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<h1><%= title %></h1>
+
+<ul>
+    <% if (users && users.length > 0) { %>
+        <% users.forEach(user => { %>
+            <li>
+                <%= user.firstName %> <%= user.lastName %> -
+                <%= user.email %>
+            </li>
+        <% }) %>
+    <% } else { %>
+        <li>No users found</li>
+    <% } %>
+</ul>
+
+<a href="/">Back to Home</a>
+
+</body>
 </html>
